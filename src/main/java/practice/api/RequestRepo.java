@@ -2,6 +2,7 @@ package practice.api;
 
 import practice.api.Request;
 
+
 public class RequestRepo {
 
     public static Request getPostman() {
@@ -13,8 +14,8 @@ public class RequestRepo {
         return request;
     }
 
-    private final static String KEY="XXX";
-    private final static String TOKEN="XXX";
+    private final static String KEY=Credentials.MyKey;
+    private final static String TOKEN=Credentials.MyToken;
 
     public static Request createTrelloBoard(String boardName) {
         Request request=baseTrelloRequest();
