@@ -1,3 +1,4 @@
 # Project exclude paths
 /target/
 *RequestRepo.java
+test
