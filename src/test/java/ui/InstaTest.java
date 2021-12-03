@@ -15,11 +15,10 @@ public class InstaTest {
     public static Object[][] browserDataProvider() {
         return new Object[][]{
                 {"chrome"},
-//                {"chrome"},
+                {"chrome"},
                 {"edge"}
         };
     }
-
 
     @Test(dataProvider = "browserDataProvider")
     @Severity(SeverityLevel.CRITICAL)
@@ -38,9 +37,22 @@ public class InstaTest {
     }
     @Severity(SeverityLevel.CRITICAL)
     public void followToGroupTest() {
-        BrowserFactory.initDriver("chrome");
+        BrowserFactory.initDriver("edge");
         LoginBO loginBO = new LoginBO();
         Assert.assertTrue(loginBO.followToGroup(5),"Follow Failed!");
 
+    }
+    @Severity(SeverityLevel.CRITICAL)
+    public void sendMassageTest() {
+        BrowserFactory.initDriver("edge");
+        LoginBO loginBO = new LoginBO();
+        Assert.assertTrue(loginBO.sendMassage(5,"Hi bro, I am Bot."),"Send Massage Failed!");
+
+    }
+    @Severity(SeverityLevel.CRITICAL)
+    public void likeAndCommentPostTest() {
+        BrowserFactory.initDriver("chrome");
+        LoginBO loginBO = new LoginBO();
+        Assert.assertTrue(loginBO.likeAndCommentPost(5,"CO_Grl8tthLNs3eHU8Py8pO1wraJYfs5_cBUos0","Cool!"),"Like Or Comment Post Failed!");
     }
 }

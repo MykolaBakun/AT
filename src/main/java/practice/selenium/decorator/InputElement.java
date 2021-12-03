@@ -9,7 +9,7 @@ public class InputElement extends CustomElement{
     }
 
     public void sendKeys(String login) {
-        System.out.println("input "+login);
+        System.out.println("input");
         getWebElement().sendKeys(login);
     }
 }

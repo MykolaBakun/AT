@@ -2,6 +2,7 @@ package practice.selenium.insta.page_factory.po;
 
 import io.qameta.allure.Link;
 import io.qameta.allure.Step;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 import practice.selenium.decorator.ButtonElement;
 import practice.selenium.decorator.InputElement;
@@ -14,18 +15,10 @@ public class LoginPO extends BasicPO{
     private InputElement loginInput;
     @FindBy(xpath = "//*[@name='password']")
     private InputElement passInput;
-    @FindBy(xpath = "//*[@type='submit']")
-    private ButtonElement loginSubmitButton;
-
-    @FindBy(xpath = "//*[@class=\'sqdOP  L3NKy   y3zKF     \']")
-    private ButtonElement followUserSubmitButton;
-
-    @FindBy(xpath = "//*[@class=\'_5f5mN       jIbKX  _6VtSN     yZn4P   \']")
-    private ButtonElement followGroupSubmitButton;
+    private InputElement textInput;
 
 
-    @FindBy(xpath = "//*[@class=\'             qF0y9          Igw0E   rBNOH          YBx95       _4EzTm                                                                                                              \']")
-    private ButtonElement followGroup;
+    private ButtonElement SubmitButton;
 
     @Override
     @Step("isOpen")
@@ -38,7 +31,7 @@ public class LoginPO extends BasicPO{
     @Step("isFollowGroup")
     public boolean isFollowGroup() {
         System.out.println("isFollowGroup");
-        return followGroup.waitForMeVisible(80);
+        return (new ButtonElement(BrowserFactory.getDriver().findElement( By.xpath("//button[normalize-space()=\'Message\']")))).waitForMeVisible(80);
     }
 
     @Step("inputLogin")
@@ -56,7 +49,8 @@ public class LoginPO extends BasicPO{
     @Step("loginSubmit")
     public LoginPO loginSubmit() {
         System.out.println("loginSubmit");
-        loginSubmitButton.click();
+        SubmitButton = new ButtonElement(BrowserFactory.getDriver().findElement( By.xpath("//button[normalize-space()=\'Log In\']")));
+        SubmitButton.click();
         return this;
     }
     @Step("loginCheck")
@@ -64,25 +58,82 @@ public class LoginPO extends BasicPO{
         System.out.println("loginCheck");
         return new HomePO();
     }
-    @Step("followUserSubmit")
-    public LoginPO followUserSubmit() {
-        System.out.println("followUserSubmit");
-        followUserSubmitButton.click();
+    @Step("followSubmit")
+    public LoginPO followSubmit() {
+        System.out.println("followSubmit");
+        SubmitButton = new ButtonElement(BrowserFactory.getDriver().findElement( By.xpath("//button[normalize-space()=\'Follow\']")));
+        SubmitButton.click();
         return this;
     }
+
     @Step("followUserCheck")
     public HomePO followUserCheck() {
         System.out.println("followUserCheck");
         return new HomePO();
     }
-    @Step("followGroupSubmit")
-    public LoginPO followGroupSubmit() {
-        System.out.println("followGroupSubmit");
-        followGroupSubmitButton.click();
+    @Step("followGroupCheck")
+    public HomePO followGroupCheck() {
+        System.out.println("followGroupCheck");
+        return new HomePO();
+    }
+
+    @Step("massageSubmit")
+    public LoginPO massageSubmit() {
+        System.out.println("massageSubmit");
+        SubmitButton = new ButtonElement(BrowserFactory.getDriver().findElement( By.xpath("//button[normalize-space()=\'Message\']")));
+        SubmitButton.click();
         return this;
     }
-    @Step("followGroupCheck")
-    public HomePO followGroupCheck() { return new HomePO();  }
+    @Step("inputMassage")
+    public LoginPO inputMassage(String massage) {
+        System.out.println("inputMassage");
+        textInput = new InputElement(BrowserFactory.getDriver().findElement(By.xpath("//textarea[@placeholder='Message...']")));
+        textInput.sendKeys(massage);
+        return this;
+    }
+    @Step("massageSend")
+    public LoginPO massageSend() {
+        System.out.println("massageSend");
+        SubmitButton = new ButtonElement(BrowserFactory.getDriver().findElement( By.xpath("//div/div/div/div/button[normalize-space()=\'Send\']")));
+        SubmitButton.click();
+        return this;
+    }
+    @Step("massageSendCheck")
+    public HomePO massageSendCheck() { return new HomePO();  }
+
+    @Step("postSubmit")
+    public LoginPO postSubmit() {
+        System.out.println("postSubmit");
+        SubmitButton = new ButtonElement(BrowserFactory.getDriver().findElement( By.xpath("//div/section/span[@class=\'_15y0l\']/button[@class=\'wpO6b  \']")));
+        SubmitButton.click();
+        return this;
+    }
+    @Step("inputComment")
+    public LoginPO inputComment(String comment) {
+        System.out.println("inputComment");
+        textInput = new InputElement(BrowserFactory.getDriver().findElement(By.xpath("//section/div[@class='RxpZH']/form/textarea")));
+        textInput.sendKeys(comment);
+        return this;
+    }
+    @Step("postSubmit")
+    public LoginPO commentSubmit() {
+        System.out.println("postSubmit");
+        SubmitButton = new ButtonElement(BrowserFactory.getDriver().findElement( By.xpath("//button[normalize-space()=\'Post\']")));
+        SubmitButton.click();
+        return this;
+    }
+    @Step("likeSubmit")
+    public LoginPO likeSubmit() {
+        System.out.println("likeSubmit");
+        SubmitButton = new ButtonElement(BrowserFactory.getDriver().findElement( By.xpath("//div/section/span/button[@class=\'wpO6b  \']")));
+        SubmitButton.click();
+        return this;
+    }
+    @Step("likeCheck")
+    public HomePO likeCheck() {
+        System.out.println("likeCheck");
+        return new HomePO();
+    }
 
     public LoginPO mySleep(long time){
         System.out.println("sleep on: "+time+" millis.");
@@ -112,6 +163,12 @@ public class LoginPO extends BasicPO{
     public LoginPO goToGroupPage() {
         System.out.println("goToGroupPage");
         BrowserFactory.getDriver().navigate().to("https://www.instagram.com/it_university/");
+        return this;
+    }
+    @Step("goToPostPage")
+    public LoginPO goToPostPage(String post) {
+        System.out.println("goToPostPage");
+        BrowserFactory.getDriver().navigate().to("https://www.instagram.com/p/" + post);
         return this;
     }
 

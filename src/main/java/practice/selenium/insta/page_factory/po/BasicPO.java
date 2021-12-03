@@ -14,4 +14,6 @@ public abstract class BasicPO {
     boolean isOpen(){ return true; };
     boolean isFollowUser(){ return true; };
     boolean isFollowGroup(){ return true; };
+    boolean isMassageSend(){ return true; };
+    boolean isLike(){ return true; };
 }
