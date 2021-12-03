@@ -22,7 +22,7 @@ public abstract class CustomElement {
 
     public boolean waitForMeVisible(int timeout_ms){
         long start=new Date().getTime();
-        long ping_time=100;
+        long ping_time=500;
         while (new Date().getTime()<(start+timeout_ms)){
             try{
             return webElement.isDisplayed();}

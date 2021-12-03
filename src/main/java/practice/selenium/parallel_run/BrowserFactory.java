@@ -1,10 +1,11 @@
 package practice.selenium.parallel_run;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
+import io.github.bonigarcia.wdm.managers.EdgeDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 public class BrowserFactory {
    private final static ThreadLocal<WebDriver> INSTANCE =new InheritableThreadLocal<>();
@@ -21,9 +22,9 @@ public class BrowserFactory {
                 ChromeDriverManager.getInstance().setup();
                 INSTANCE.set(new ChromeDriver());
             }
-            case "firefox" -> {
-                WebDriverManager.firefoxdriver().setup();
-                INSTANCE.set(new FirefoxDriver());
+            case "edge" -> {
+                EdgeDriverManager.edgedriver().setup();
+                INSTANCE.set(new EdgeDriver());
             }
             default -> throw new RuntimeException("invalid browser " + browserName);
         }

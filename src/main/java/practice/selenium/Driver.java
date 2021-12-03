@@ -1,14 +1,13 @@
 package practice.selenium;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
+import io.github.bonigarcia.wdm.managers.EdgeDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import practice.PropertyUtil;
+import org.openqa.selenium.edge.EdgeDriver;
 
 public class Driver {
 
@@ -21,17 +20,16 @@ public class Driver {
 
     private WebDriver webDriver;
 
-    public WebDriver getDriver() {
-        String browser = (String) new PropertyUtil().getProperty("browser");
+    public WebDriver getDriver(String browser) {
         if (webDriver == null) {
             switch (browser) {
                 case "chrome" -> {
                     ChromeDriverManager.getInstance().setup();
                     webDriver = new ChromeDriver();
                 }
-                case "firefox" -> {
-                    WebDriverManager.firefoxdriver().setup();
-                    webDriver = new FirefoxDriver();
+                case "edge" -> {
+                    EdgeDriverManager.edgedriver().setup();
+                    webDriver = new EdgeDriver();
                 }
                 default -> throw new RuntimeException("invalid browser " + browser);
             }
@@ -40,7 +38,7 @@ public class Driver {
     }
 
     public static void main(String[] args) {
-        WebDriver driver = Driver.getInstance().getDriver();
+        WebDriver driver = Driver.getInstance().getDriver("edge");
         JavascriptExecutor executor = (JavascriptExecutor) driver;
         driver.get("https://stackoverflow.com/");
         System.out.println(executor.executeScript("return document.readyState"));

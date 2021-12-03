@@ -1,4 +1,4 @@
-package api.trello;
+package api;
 
 
 import org.json.JSONArray;
@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import practice.api.Response;
 import practice.api.TrelloBO;
 
-public class CreateBoardTest {
+public class TrelloTest {
     TrelloBO trelloBO=new TrelloBO();
 
     @Test

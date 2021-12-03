@@ -11,8 +11,7 @@ public abstract class BasicPO {
         PageFactory.initElements(new CustomDecorator(BrowserFactory.getDriver()),this);
     }
 
-    boolean isOpen(){
-        //TODO
-        return true;
-    };
+    boolean isOpen(){ return true; };
+    boolean isFollowUser(){ return true; };
+    boolean isFollowGroup(){ return true; };
 }
