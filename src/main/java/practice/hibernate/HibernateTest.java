@@ -52,7 +52,7 @@ public class HibernateTest {
     }
 
     public static void main(String[] args) {
-//        User user = setUser("adskaya_drochka","brembo1234344");
+//        User user = setUser("test","test");
         User user = getUser(5);
         System.out.println(user.getLogin());
 
