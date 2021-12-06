@@ -78,7 +78,7 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">1/boards/?name=tryAt&amp;key=7b0c058a1dcbfd4e9a5c55d90e53066f&amp;token=c3e9c5dc1608fe18b397e41131c2ab7203b9a30d7650a9f6af459d376f40b2b7</stringProp>
+          <stringProp name="HTTPSampler.path">1/boards/?name=Test1&amp;key=0b7b5d9f08ba4a8cbbc1bf6ee897b25e&amp;token=9ff6c1752b704ec4c626ea249af72010abbdfdfd6df68297c54b8afaec093c72</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -106,7 +106,7 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">1/boards/${id}?key=7b0c058a1dcbfd4e9a5c55d90e53066f&amp;token=c3e9c5dc1608fe18b397e41131c2ab7203b9a30d7650a9f6af459d376f40b2b7</stringProp>
+          <stringProp name="HTTPSampler.path">1/boards/${id}?key=0b7b5d9f08ba4a8cbbc1bf6ee897b25e&amp;token=9ff6c1752b704ec4c626ea249af72010abbdfdfd6df68297c54b8afaec093c72</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -147,7 +147,7 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">1/boards/?name=tryAt&amp;key=7b0c058a1dcbfd4e9a5c55d90e53066f&amp;token=c3e9c5dc1608fe18b397e41131c2ab7203b9a30d7650a9f6af459d376f40b2b7</stringProp>
+          <stringProp name="HTTPSampler.path">1/boards/?name=Test2&amp;key=0b7b5d9f08ba4a8cbbc1bf6ee897b25e&amp;token=9ff6c1752b704ec4c626ea249af72010abbdfdfd6df68297c54b8afaec093c72</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -175,7 +175,7 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">1/boards/${id}?key=7b0c058a1dcbfd4e9a5c55d90e53066f&amp;token=c3e9c5dc1608fe18b397e41131c2ab7203b9a30d7650a9f6af459d376f40b2b7</stringProp>
+          <stringProp name="HTTPSampler.path">1/boards/${id}?key=0b7b5d9f08ba4a8cbbc1bf6ee897b25e&amp;token=9ff6c1752b704ec4c626ea249af72010abbdfdfd6df68297c54b8afaec093c72</stringProp>
           <stringProp name="HTTPSampler.method">DELETE</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -216,7 +216,7 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">1/boards/?name=tryAt&amp;key=7b0c058a1dcbfd4e9a5c55d90e53066f&amp;token=c3e9c5dc1608fe18b397e41131c2ab7203b9a30d7650a9f6af459d376f40b2b7</stringProp>
+          <stringProp name="HTTPSampler.path">1/boards/?name=Test3&amp;key=0b7b5d9f08ba4a8cbbc1bf6ee897b25e&amp;token=9ff6c1752b704ec4c626ea249af72010abbdfdfd6df68297c54b8afaec093c72</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -244,7 +244,7 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">1/boards//${id}?name=AtFrame&amp;desc=Test&amp;prefs/background=green&amp;key=7b0c058a1dcbfd4e9a5c55d90e53066f&amp;token=c3e9c5dc1608fe18b397e41131c2ab7203b9a30d7650a9f6af459d376f40b2b7</stringProp>
+          <stringProp name="HTTPSampler.path">1/boards//${id}?name=Hello&amp;desc=Test3&amp;prefs/background=red&amp;key=0b7b5d9f08ba4a8cbbc1bf6ee897b25e&amp;token=9ff6c1752b704ec4c626ea249af72010abbdfdfd6df68297c54b8afaec093c72</stringProp>
           <stringProp name="HTTPSampler.method">PUT</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -285,7 +285,7 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">1/boards/?name=tryAt&amp;key=7b0c058a1dcbfd4e9a5c55d90e53066f&amp;token=c3e9c5dc1608fe18b397e41131c2ab7203b9a30d7650a9f6af459d376f40b2b7</stringProp>
+          <stringProp name="HTTPSampler.path">1/boards/?name=Test4&amp;key=0b7b5d9f08ba4a8cbbc1bf6ee897b25e&amp;token=9ff6c1752b704ec4c626ea249af72010abbdfdfd6df68297c54b8afaec093c72</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -313,7 +313,7 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">1/boards//${id}/lists?name=Їсти&amp;pos=bottom&amp;key=7b0c058a1dcbfd4e9a5c55d90e53066f&amp;token=c3e9c5dc1608fe18b397e41131c2ab7203b9a30d7650a9f6af459d376f40b2b7</stringProp>
+          <stringProp name="HTTPSampler.path">1/boards//${id}/lists?name=List1&amp;pos=bottom&amp;key=0b7b5d9f08ba4a8cbbc1bf6ee897b25e&amp;token=9ff6c1752b704ec4c626ea249af72010abbdfdfd6df68297c54b8afaec093c72</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
