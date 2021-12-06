@@ -1,4 +1,4 @@
-mvn clean install exec:java -Dexec.mainClass="practice.serialization.MainExecutorExample" -Dexec.args="arg0 arg1" -DskipTests=true
+mvn clean install exec:java -Dexec.mainClass="practice.test.MainExecutorExample" -Dexec.args="Mykola Bak" -DskipTests=true
 
 #TEST execution
 mvn clean test
